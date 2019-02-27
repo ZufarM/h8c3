@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="swapiObj.js"></script>
+</head>
+<body>
+    <h1 id="inputLabel"></h1>
+    <table border="1">
+        <input type="text">
+        <input type="submit" value="Filtering">
+        <thead>
+            <tr>
+                <td>No.</td>
+                <td>Name</td>
+                <td>diameter</td>
+                <td>climate</td>
+                <td>gravity</td>
+                <td>terrain</td>
+                <td>Filtering?</td>
+            </tr>
+        </thead>
+        <tbody>
+            <script language="javascript" type="text/javascript">
+                for (var a=0; a < swapiObj.results.length; a++) {
+                    var no = a+1;
+                    document.write("<tr>");
+                    document.write("<td>" + no + "</td>");
+                    document.write("<td>" + swapiObj.results[a].name + "</td>");
+                    document.write("<td>" + swapiObj.results[a].diameter + "</td>");
+                    document.write("<td>" + swapiObj.results[a].climate + "</td>");
+                    document.write("<td>" + swapiObj.results[a].gravity + "</td>");
+                    document.write("<td>" + swapiObj.results[a].terrain + "</td>");
+                    document.write("<td>" + "<button>Fil?</button>" + "</td>");
+                    document.write("</tr>");
+                }
+            </script>
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
